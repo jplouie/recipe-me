@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.10.4"
+    "ejs": "^1.0.0",
+    "express": "^4.10.4",
+    "node-env-file": "^0.1.4",
+    "request": "^2.51.0"
   }
 }
