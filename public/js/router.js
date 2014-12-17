@@ -1,7 +1,7 @@
-App.router.reopen({
+App.Router.reopen({
   rootURL: '/'
 });
 
-App.router.map(function(){
+App.Router.map(function(){
   this.resource('recipes');
 });
