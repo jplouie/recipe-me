@@ -19,8 +19,11 @@ var router = express.Router();
 
 // API routes
 
-router.get('/', function(request, response){
-  response.json({ message: 'hello world'})
+router.get('/secrets', function(request, response){
+  response.json({
+    appId: process.env.APP_ID,
+    appKey: process.env.APP_KEY
+  });
 });
 
 // Prefix api routes with '/api'

@@ -3,21 +3,15 @@
   <head>
     <title>Recipe Me!</title>
   </head>
-  <body>
-    hello world
-    <div id="ember-app"></div>
+  <body ng-app="RecipeMe">
+    <div ng-view></div>
 
-    <script src="jquery/dist/jquery.js"></script>
-    <script src="handlebars/handlebars.js"></script>
-    <script src="ember/ember.js"></script>
-    <script src="ember-data/ember-data.js"></script>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="lodash/dist/lodash.js"></script>
+    <script src="restangular/dist/restangular.js"></script>
     <script src="js/application.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/models/store.js"></script>
-    <script src="js/models/recipe.js"></script>
-    <script type="text/handlebars" src="js/templates/application.hbs"></script>
-    <!-- <script src="js/views/application-view.js"></script> -->
-    <!-- <script src="ember/controllers/*.js"></script> -->
-    <!-- <script src="ember/templates/application.hbs"></script> -->
+    <script src="js/services/recipe-service.js"></script>
+    <script src="js/controllers/recipe-controller.js"></script>
   </body>
 </html>
