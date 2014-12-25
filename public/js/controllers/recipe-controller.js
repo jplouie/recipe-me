@@ -1,3 +1,3 @@
-app.controller('RecipeController', function($scope, Recipe){
-  $scope.test = 'hello';
+app.controller('RecipeController', function($scope, Recipe, $rootScope){
+  $scope.test = $rootScope.keys;
 });
