@@ -1,4 +1,11 @@
 <h1>RecipeMe!</h1>
-<div></div>
-<div></div>
-{{test}}
+<div>
+  <input type="text" ng-model="msg"><br>
+  <button class="search" ng-click="search(msg)">Search</button>
+</div>
+<!-- {{result}} -->
+
+<div ng-repeat="result in results">
+  <h3>{{result.recipeName}}</h3>
+  <img src={{result.smallImageUrls[0]}}>
+</div>

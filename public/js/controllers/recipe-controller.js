@@ -1,5 +1,8 @@
-app.controller('RecipeController', function($scope, Recipe){
-  Recipe.api.get().then(function(data){
-    $scope.test = data;
-  });
+app.controller('RecipeController', function($scope, Recipe, $rootScope){
+  $scope.search = function(msg){
+    Recipe.search(msg).then(function(data){
+      $scope.results = data.matches;
+      console.log(data);
+    });
+  };
 });
