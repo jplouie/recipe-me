@@ -3,7 +3,9 @@ var env = require('node-env-file');
 var app = express();
 var port = process.env.PORT || 4567;
 
-env(__dirname + '/.env');
+if(!process.env.APP_ID){
+  env(__dirname + '/.env');
+}
 app.set('views', __dirname + '/app/views')
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
