@@ -5,4 +5,9 @@ app.controller('RecipeController', function($scope, Recipe){
       console.log(data);
     });
   };
+
+  $scope.get = function(recipe){
+    var id = recipe.id;
+    
+  };
 });

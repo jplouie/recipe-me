@@ -4,6 +4,11 @@ app.factory('Recipe', function(Restangular, YummlyRestangular, $rootScope){
     $rootScope.keys = data;
   });
   var search = YummlyRestangular.all('api');
+  // SET CUSTOM HEADERS FOR API SEARCH
+  // RestangularProvider.setDefaultHeaders({
+  //  'X-Yummly-App-ID': $rootScope.keys.appId,
+  //  'X-Yummly-App-Key': $rootScope.keys.appKey
+  // });
 
   return {
     api: api.get(),
@@ -14,7 +19,7 @@ app.factory('Recipe', function(Restangular, YummlyRestangular, $rootScope){
       });
     },
     get: function(query){
-      
+      return search.one('recipe', query);
     }
   };
 });

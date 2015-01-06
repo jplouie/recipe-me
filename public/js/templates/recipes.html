@@ -6,6 +6,6 @@
 <!-- {{result}} -->
 
 <div ng-repeat="result in results">
-  <h3>{{result.recipeName}}</h3>
+  <h3 ng-click="get(result)">{{result.recipeName}}</h3>
   <img src={{result.smallImageUrls[0]}}>
 </div>
