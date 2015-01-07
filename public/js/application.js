@@ -1,12 +1,15 @@
 var app = angular.module('RecipeMe', ['ngRoute', 'restangular']);
 
 app.config(function($routeProvider){
-  $routeProvider.when('/', {
+  $routeProvider.when('/recipes', {
     templateUrl: '/js/templates/recipes.html',
     controller: 'RecipeController'
   })
-  .when('recipes/:id', {
+  .when('/recipes/:id', {
     templateUrl: '/js/templates/single-recipe.html',
     controller: 'SingleRecipeController'
+  })
+  .otherwise({
+    redirectTo: '/recipes'
   });
 });

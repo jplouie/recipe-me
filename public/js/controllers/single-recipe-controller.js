@@ -1,4 +1,7 @@
-app.controller('SingleRecipeController', function($scope, Recipe){
+app.controller('SingleRecipeController', function($scope, $routeParams, Recipe){
   // GET SINGLE RECIPE BY ID IN URL
-  // Recipe.get()
+  Recipe.get($routeParams.id).then(function(data){
+    console.log(data);
+    $scope.name = data.name;
+  });
 });
